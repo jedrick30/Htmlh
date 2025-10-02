@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Form</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Student Information Form</title>
 </head>
 <body>
-  <div class="form-container">
     <form>
-      <label>Enter ID</label>
-      <input type="text" name="id" required>
+        <label for="id">Enter ID</label>
+        <input type="text" id="id" name="id" />
 
-      <label>Enter Last Name</label>
-      <input type="text" name="lastname" required>
+        <label for="lastname">Enter Last Name</label>
+        <input type="text" id="lastname" name="lastname" />
 
-      <label>Enter First Name</label>
-      <input type="text" name="firstname" required>
+        <label for="firstname">Enter First Name</label>
+        <input type="text" id="firstname" name="firstname" />
 
-      <label>Enter Middle Name</label>
-      <input type="text" name="middlename">
+        <label for="middlename">Enter Middle Name</label>
+        <input type="text" id="middlename" name="middlename" />
 
-      <label>Enter Course</label>
-      <input type="text" name="course" required>
+        <label for="course">Enter Course</label>
+        <input type="text" id="course" name="course" />
 
+        <label for="section">Enter Section</label>
+        <input type="text" id="section" name="section" />
+
+        <input type="submit" value="Submit" />
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID Number</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Course</th>
+                <th>Section</th>
+            </tr>
+        </thead>
+          
+    </table>
+</body>
+</html>
       <label>Enter Section</label>
       <input type="text" name="section" required>
 
