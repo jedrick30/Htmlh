@@ -1,26 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Student Form — Demo</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
-    <section class="form-area">
-      <form id="studentForm" class="card" autocomplete="off">
-        <h2>Student Info</h2>
+  <div class="form-container">
+    <form id="studentForm">
+      <table>
+        <tr>
+          <td><label for="idNumber">Enter ID</label></td>
+          <td><input type="text" id="idNumber" name="idNumber"></td>
+        </tr>
+        <tr>
+          <td><label for="lastName">Enter Last Name</label></td>
+          <td><input type="text" id="lastName" name="lastName"></td>
+        </tr>
+        <tr>
+          <td><label for="firstName">Enter First Name</label></td>
+          <td><input type="text" id="firstName" name="firstName"></td>
+        </tr>
+        <tr>
+          <td><label for="middleName">Enter Middle Name</label></td>
+          <td><input type="text" id="middleName" name="middleName"></td>
+        </tr>
+        <tr>
+          <td><label for="course">Enter Course</label></td>
+          <td><input type="text" id="course" name="course"></td>
+        </tr>
+        <tr>
+          <td><label for="section">Enter Section</label></td>
+          <td><input type="text" id="section" name="section"></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:right;">
+            <button type="submit">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
 
-        <label for="idNumber">Enter ID</label>
-        <input id="idNumber" name="idNumber" type="text" placeholder="ID Number">
+  <div class="table-container">
+    <table id="studentsTable" border="1">
+      <thead>
+        <tr>
+          <th>ID Number</th>
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Course</th>
+          <th>Section</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample row -->
+        <tr>
+          <td>12345</td>
+          <td>De Guzman</td>
+          <td>Richard</td>
+          <td>De Leon</td>
+          <td>BSIT</td>
+          <td>IT203</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-        <label for="lastName">Enter Last Name</label>
-        <input id="lastName" name="lastName" type="text" placeholder="Last Name">
+  <script>
+    // Add data to table
+    document.getElementById('studentForm').addEventListener('submit', function(e){
+      e.preventDefault();
 
-        <label for="firstName">Enter First Name</label>
-        <input id="firstName" name="firstName" type="text" placeholder="First Name">
+      const id = document.getElementById('idNumber').value;
+      const last = document.getElementById('lastName').value;
+      const first = document.getElementById('firstName').value;
+      const middle = document.getElementById('middleName').value;
+      const course = document.getElementById('course').value;
+      const section = document.getElementById('section').value;
 
+      const table = document.getElementById('studentsTable').getElementsByTagName('tbody')[0];
+      const newRow = table.insertRow();
+
+      [id,last,first,middle,course,section].forEach(text=>{
+        let cell = newRow.insertCell();
+        cell.textContent = text;
+      });
+
+      this.reset();
+    });
+  </script>
+</body>
+</html>
         <label for="middleName">Enter Middle Name</label>
         <input id="middleName" name="middleName" type="text" placeholder="Middle Name">
 
