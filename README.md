@@ -53,3 +53,57 @@
   </div>
 </body>
 </html>
+
+
+
+body {
+    background-color: #f4d9dd;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    background-color: #abe0e3;
+    padding: 20px;
+    width: 350px;
+    margin: 20px auto;
+    border: 1px solid #5e8286;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+form label {
+    font-weight: bold;
+    justify-self: end;
+}
+
+form input[type="text"] {
+    width: 180px;
+    padding: 5px;
+}
+
+form input[type="submit"] {
+    grid-column: 2 / 3;
+    justify-self: start;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
