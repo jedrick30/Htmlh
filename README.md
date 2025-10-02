@@ -8,20 +8,30 @@
 </head>
 <body>
   <div class="form-container">
-    <form id="studentForm">
-      <table>
-        <tr>
-          <td><label for="idNumber">Enter ID</label></td>
-          <td><input type="text" id="idNumber" name="idNumber"></td>
-        </tr>
-        <tr>
-          <td><label for="lastName">Enter Last Name</label></td>
-          <td><input type="text" id="lastName" name="lastName"></td>
-        </tr>
-        <tr>
-          <td><label for="firstName">Enter First Name</label></td>
-          <td><input type="text" id="firstName" name="firstName"></td>
-        </tr>
+    <form>
+      <label>Enter ID</label>
+      <input type="text" name="id" required>
+
+      <label>Enter Last Name</label>
+      <input type="text" name="lastname" required>
+
+      <label>Enter First Name</label>
+      <input type="text" name="firstname" required>
+
+      <label>Enter Middle Name</label>
+      <input type="text" name="middlename">
+
+      <label>Enter Course</label>
+      <input type="text" name="course" required>
+
+      <label>Enter Section</label>
+      <input type="text" name="section" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>        </tr>
         <tr>
           <td><label for="middleName">Enter Middle Name</label></td>
           <td><input type="text" id="middleName" name="middleName"></td>
